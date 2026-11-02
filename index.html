@@ -1,0 +1,188 @@
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Parabéns — Esse fim de ano é nosso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@1,400;1,500;1,700&family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<style>
+/* cores amostradas da referência IMG_5626.JPG com Pillow */
+:root{--rosa:#F26A88;--creme:#F4F1EC;--pink:#F6527E}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;background:var(--rosa)}
+body{font-family:'Urbanist',-apple-system,sans-serif;-webkit-text-size-adjust:100%}
+
+/* fundo: ocupa a tela inteira, por trás da prancha */
+#ast{position:fixed;right:-9vmax;bottom:-9vmax;width:52vmax;z-index:0}
+#grao{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.33'/%3E%3C/svg%3E")}
+#confete{position:fixed;inset:0;z-index:9;pointer-events:none}
+
+/* prancha de 1200x1700 escalada pra caber inteira — a tela nunca rola */
+#palco{position:fixed;left:50%;top:50%;width:1200px;height:1980px;z-index:4;
+       transform-origin:center center;transform:translate(-50%,-50%) scale(var(--k,.3))}
+
+#cracha{position:absolute;right:16px;top:0;width:434px;z-index:5;
+        transform:rotate(5deg);transform-origin:top right;
+        filter:drop-shadow(0 18px 36px rgba(110,20,45,.3))}
+
+#cartao{position:absolute;left:60px;right:60px;top:236px;background:var(--creme);
+        border-radius:48px;box-shadow:0 20px 54px rgba(110,20,45,.24);
+        padding:88px 70px 76px;display:flex;flex-direction:column}
+#cartao::before{content:'';position:absolute;left:50%;top:42px;transform:translateX(-50%);
+        width:168px;height:13px;border-radius:999px;background:rgba(35,31,32,.14)}
+
+.etq{font-size:30px;letter-spacing:.24em;text-transform:uppercase;color:#8d6a72;font-weight:500}
+
+.abraco{margin-top:86px}
+#nome{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:500;
+      font-size:66px;line-height:1;color:var(--pink);margin-bottom:8px}
+#nome:empty{display:none}
+.parabens{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:400;
+      font-size:146px;line-height:.98;color:#231F20;letter-spacing:-.01em}
+.dentro{display:flex;align-items:center;gap:22px;margin-top:30px}
+.check{flex:0 0 auto;width:78px;height:78px;border-radius:50%;background:var(--pink);
+       display:grid;place-items:center;box-shadow:0 6px 18px rgba(246,82,126,.42);
+       animation:pop .55s .35s cubic-bezier(.2,1.65,.4,1) both}
+.check svg{width:52%;height:52%}
+@keyframes pop{from{transform:scale(.2);opacity:0}to{transform:scale(1);opacity:1}}
+.dentro span{font-size:36px;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);
+       font-weight:600}
+
+.nome-mentoria{margin-top:84px}
+.fina{font-weight:200;color:#231F20;line-height:.86;white-space:nowrap;letter-spacing:-.012em}
+.grossa{font-family:'Alfa Slab One',Georgia,serif;line-height:.94;white-space:nowrap}
+.g2{color:#231F20;margin-top:6px}
+.g3{color:var(--pink);margin-top:6px}
+.colch{color:rgba(35,31,32,.3);font-size:1.05em;vertical-align:-.035em}
+
+.recado{margin-top:58px;border-top:1px solid rgba(35,31,32,.16);padding-top:44px;
+        font-size:40px;line-height:1.5;color:#3a3335;font-weight:400}
+.recado b{font-weight:700;color:#231F20}
+.recado .zap{color:var(--pink);font-weight:700}
+</style>
+
+<img id="ast" src="asterisco.svg" alt="">
+<div id="grao"></div>
+
+<div id="palco">
+  <div id="cartao">
+    <div class="etq">mentoria &middot; izabela laila</div>
+
+    <div class="abraco">
+      <div id="nome"></div>
+      <div class="parabens">Parabéns!</div>
+      <div class="dentro">
+        <div class="check">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.5 12.6 L9.2 18.2 L20.5 5.8" stroke="#F4F1EC" stroke-width="3.1"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span>você está dentro</span>
+      </div>
+    </div>
+
+    <div class="nome-mentoria">
+      <div class="fina" data-fit="940">mentoria</div>
+      <div class="grossa g2" data-fit="940">esse fim de ano</div>
+      <div class="grossa g3" data-fit="608"><span class="colch">[</span>é nosso!<span class="colch">]</span></div>
+    </div>
+
+    <p class="recado">Começa <b>dia 9/11</b>. Um dia antes de começar,
+      nosso time vai te chamar <span class="zap">no WhatsApp</span>.</p>
+  </div>
+  <img id="cracha" src="cracha.png" alt="Crachá da mentoria">
+</div>
+
+<canvas id="confete"></canvas>
+
+<script>
+/* 1. escala a prancha pra caber inteira na tela — nunca rola */
+var PW = 1200, PH = 1980;
+function medirPrancha(){
+  var cartao = document.getElementById('cartao'), palco = document.getElementById('palco');
+  var h = 236 + cartao.offsetHeight;
+  PH = h; palco.style.height = h + 'px';
+}
+function escalar(){
+  var h = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+  var w = window.innerWidth;
+  document.getElementById('palco').style.setProperty('--k', Math.min(w/PW, h/PH));
+  var c = document.getElementById('confete');
+  c.width = w; c.height = h;
+}
+addEventListener('resize', escalar); addEventListener('orientationchange', escalar);
+if (window.visualViewport) window.visualViewport.addEventListener('resize', escalar);
+escalar();
+
+/* 2. nome da compradora — entra por ?nome= (ver NOTA no fim do arquivo) */
+(function(){
+  var p = new URLSearchParams(location.search), v = '';
+  ['nome','name','customer_name','cliente','first_name','primeiro_nome'].some(function(k){
+    if (p.get(k)) { v = p.get(k); return true; } return false;
+  });
+  if (!v) return;
+  var pri = v.trim().split(/\s+/)[0];
+  if (!pri) return;
+  pri = pri.charAt(0).toUpperCase() + pri.slice(1).toLowerCase();
+  document.getElementById('nome').textContent = pri + ',';
+})();
+
+/* 3. cada linha grande ocupa a largura exata pedida, em qualquer aparelho */
+function ajustar(){
+  document.querySelectorAll('[data-fit]').forEach(function(el){
+    var alvo = parseFloat(el.dataset.fit);
+    el.style.fontSize = '100px';
+    var w = el.scrollWidth; if(!w) return;
+    el.style.fontSize = (100*alvo/w).toFixed(2) + 'px';
+  });
+}
+function montar(){ ajustar(); medirPrancha(); escalar(); }
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(montar);
+addEventListener('load', montar);
+
+/* 4. confete */
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var c = document.getElementById('confete'), x = c.getContext('2d');
+  var cores = ['#F6527E','#F4F1EC','#231F20','#FFC2D4','#E8365F'];
+  var N = 150, pecas = [], t0 = null, DUR = 7000;
+  function nasce(p){
+    var W = c.width || 400, H = c.height || 800;
+    p.x = Math.random()*W;
+    p.y = -Math.random()*H - 20;
+    p.l = 11 + Math.random()*17;
+    p.a = 5.5 + Math.random()*7;
+    p.vy = (150 + Math.random()*210) * (H/800);
+    p.vx = (-34 + Math.random()*68);
+    p.g = Math.random()*Math.PI*2;
+    p.vg = -3.4 + Math.random()*6.8;
+    p.cor = cores[(Math.random()*cores.length)|0];
+    return p;
+  }
+  for (var i=0;i<N;i++) pecas.push(nasce({}));
+  function quadro(ts){
+    if (t0 === null) t0 = ts;
+    var dt = 1/60, passado = ts - t0, vivos = 0;
+    x.clearRect(0,0,c.width,c.height);
+    for (var i=0;i<N;i++){
+      var p = pecas[i];
+      p.y += p.vy*dt; p.x += p.vx*dt + Math.sin(p.g)*0.8; p.g += p.vg*dt;
+      if (p.y < c.height + 40) vivos++;
+      var al = passado > DUR-1400 ? Math.max(0,(DUR-passado)/1400) : 1;
+      x.save(); x.translate(p.x,p.y); x.rotate(p.g);
+      x.globalAlpha = al; x.fillStyle = p.cor;
+      x.fillRect(-p.a/2, -p.l/2, p.a, p.l);
+      x.restore();
+    }
+    if (passado < DUR && vivos) requestAnimationFrame(quadro);
+    else x.clearRect(0,0,c.width,c.height);
+  }
+  requestAnimationFrame(quadro);
+})();
+</script>
+
+<!-- NOTA MEDIDA (02/11): a Kiwify NÃO manda o nome da compradora para a página de
+     obrigado. Os parâmetros que ela acrescenta são token, code_senha, amount,
+     payment_type, payment_version, kw-country, kw-parent-currency, order_code e
+     subdominio. Para o nome aparecer sozinho é preciso um endpoint que troque o
+     order_code pelo nome na API da Kiwify. Sem isso a tela mostra só "Parabéns!". -->
